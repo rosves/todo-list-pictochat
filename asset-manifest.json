@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/todo-list-pictochat/static/css/main.1d91358a.css",
+    "main.js": "/todo-list-pictochat/static/js/main.aa38c804.js",
+    "static/js/787.34d05ddd.chunk.js": "/todo-list-pictochat/static/js/787.34d05ddd.chunk.js",
+    "static/media/NDS12.otf": "/todo-list-pictochat/static/media/NDS12.38ec197e1d8ec9646afa.otf",
+    "index.html": "/todo-list-pictochat/index.html",
+    "main.1d91358a.css.map": "/todo-list-pictochat/static/css/main.1d91358a.css.map",
+    "main.aa38c804.js.map": "/todo-list-pictochat/static/js/main.aa38c804.js.map",
+    "787.34d05ddd.chunk.js.map": "/todo-list-pictochat/static/js/787.34d05ddd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1d91358a.css",
+    "static/js/main.aa38c804.js"
+  ]
+}

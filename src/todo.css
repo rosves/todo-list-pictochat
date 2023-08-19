@@ -1,0 +1,145 @@
+@font-face {
+	font-family:'NDS12';
+		src:url('../src/fonts/NDS12.otf')  format('opentype');
+	font-weight:normal;
+	font-style:normal;
+}
+
+body{
+overflow-y: hidden;
+background-color: #D2DCDE;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+
+}
+
+#barre{
+    border: 2.4px rgba(131, 143, 161, 0.5) solid;
+    width: 25.4%;
+   margin: auto;
+   justify-self: center;
+   border-radius: 7px;
+   padding: 0;
+   background-color: rgba(131, 143, 161, 0.7);
+}
+
+#barre input{
+    width: 98%;
+    height: 28px;
+    border-radius: 8px ;
+    border: 1px solid #B81BD2;
+    outline: none;
+}
+
+#barre input::placeholder{
+    font-family:'NDS12';
+    padding-left: 10px;
+}
+
+/* bouton 'ajouter'*/
+#barre button{
+    width: 7.1%;
+    height: 31px;
+    background-color: hwb(291 11% 18% / 0.21);
+    border: 1px #B81BD2 solid;
+    border-radius: 0 8px 8px 8px;
+    position:absolute;
+    z-index: 99;
+    left: 774px;
+    cursor: pointer;
+    font-family:'NDS12';
+    font-size: 12px;
+}
+
+#window{
+    margin: auto;
+    margin-top: 40px;
+    border: 3px rgba(131, 143, 161, 0.5) solid;
+    width: 25%;
+    border-radius:7px ;
+    height: 300PX;
+    background-color: rgba(131, 143, 161, 0.7);
+    padding: 2px;
+}
+
+/* titre */
+#window h1{
+    background-color: hwb(291 11% 18% / 0.21);
+    border:#B81BD2 solid 1px;
+    width: 25%;
+    border-radius: 8px 0;
+    margin:0;
+    margin-left: -0.5px;
+    margin-top: -1px;
+    padding-left: 25px;
+    padding-top: 8px;
+    font-size: 13px;
+    height: 25px;
+    font-family:'NDS12';
+    font-weight: 400;
+}
+
+/* fond blanc + traits */
+#screen{
+    border: #B81BD2 1px solid;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(8, 25px);
+    grid-gap: 8px;
+}
+.grid-item{
+    border-top: 1px solid rgba(0, 0, 0, 0.17);
+}
+.last{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.17);
+}
+
+/* todo */
+
+ul{
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 40px;
+    font-family: 'NDS12';
+    font-size: 13px;
+    width: 21%;
+}
+
+ul li{
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ul li button{
+border: 1px #B81BD2 solid;
+margin-left: 10px;
+background-color: hwb(291 11% 18% / 0.21);
+border-radius: 0 8px 8px 8px ;
+font-family: 'NDS12';
+font-size: 12px;
+cursor: pointer;
+width: 30px;
+height: 21px;
+padding-top: -15px;
+}
+
+/* #modifications{
+
+} */
+
+
+/* choices */
+
+#choice{
+    border: 2px red solid;
+}

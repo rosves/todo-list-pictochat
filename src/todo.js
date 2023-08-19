@@ -1,18 +1,24 @@
 import React, { useState, useEffect } from "react";
-import '../src/todo.css'
+import "../src/todo.css";
 
 const TodoList = () => {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
   const [editTaskId, setEditTaskId] = useState(null);
-  const [keyPressed, setKeyPressed] = useState("");
-  
-  
+  // const [keyPressed, setKeyPressed] = useState("");
 
 
+  const ColorChanger = () => {
+    // State to hold the current color value
+    const [color, setColor] = useState('pink');
+  
+    // const handleColorChange = (newColor) => {
+    //   setColor(newColor);
+    // };
+  }
   const handleInputChange = (event) => {
     setNewTask(event.target.value);
-    setKeyPressed(event.key);
+    // setKeyPressed(event.key);
   };
 
   const handleAddTask = () => {
@@ -35,7 +41,7 @@ const TodoList = () => {
       }
 
       setNewTask("");
-      setKeyPressed("");
+      // setKeyPressed("");
     }
   };
 
@@ -45,9 +51,9 @@ const TodoList = () => {
         handleAddTask();
       }
     };
-  
+
     document.addEventListener("keydown", handleKeyPress);
-  
+
     return () => {
       document.removeEventListener("keydown", handleKeyPress);
     };
@@ -65,60 +71,56 @@ const TodoList = () => {
 
   return (
     <div id="container">
+      <div id="barre">
+        <input
+          type="text"
+          value={newTask}
+          onChange={handleInputChange}
+          onKeyDown={(event) => {
+            if (event.key === "Enter") {
+              handleAddTask();
+            }
+          }}
+          placeholder="Nouvelle tâche"
+        />
+        <button onClick={handleAddTask}>
+          {editTaskId !== null ? "Modifier" : "Ajouter"}
+        </button>
+      </div>
 
-   
-    <div id="barre">
-      <input
-        type="text"
-        value={newTask}
-        onChange={handleInputChange}
-        onKeyDown={(event) => {
-          if (event.key === "Enter") {
-            handleAddTask();
-          }
-        }}
-        placeholder="Nouvelle tâche"
-      />
-      <button onClick={handleAddTask}>
-        {editTaskId !== null ? "Modifier" : "Ajouter"}
-      </button>
- </div>
+      <section id="window">
+        <div id="screen">
+          <h1>To-do List</h1>
 
- <section id="window">
-  <div id="screen">
-    <h1>To-do List</h1>
+          <div className="grid-item"></div>
+          <div className="grid-item"></div>
+          <div className="grid-item"></div>
+          <div className="grid-item"></div>
+          <div className="grid-item "></div>
+          <div className="grid-item "></div>
+          <div className="grid-item "></div>
+          <div className="grid-item "></div>
 
-    <div className="grid-item"></div>
-    <div className="grid-item"></div>
-    <div className="grid-item"></div>
-    <div className="grid-item"></div>
-    <div className="grid-item "></div>
-    <div className="grid-item "></div>
-    <div className="grid-item "></div>
-    <div className="grid-item "></div>
-
-      <ul>
-        {tasks.map((task) => (
-          <li key={task.id}>
-            {task.name}
-            <div id='modifications'>
-            <button onClick={() => handleEditTask(task.id)}>!</button>
-            <button onClick={() => handleDeleteTask(task.id)}>X</button>
-            </div>
-          </li>
-        ))}
-      </ul>
-
-</div>
-</section> 
-<section id="choice">
-          <div></div>
-          <div></div>
-          <div></div>
-          
-</section>
+          <ul>
+            {tasks.map((task) => (
+              <li key={task.id}>
+                {task.name}
+                <div id="modifications">
+                  <button onClick={() => handleEditTask(task.id)}>!</button>
+                  <button onClick={() => handleDeleteTask(task.id)}>X</button>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+      {/* <section id="choice">
+        <button onClick={()=> handleColorChange('pink')}><div className="rose"></div></button>
+        <button onClick={()=> handleColorChange('jaune')}><div className="yellow"></div></button>
+        <button onClick={()=> handleColorChange('vert')}><div className="green"></div></button>
+      </section> */}
     </div>
   );
 };
 
-export default TodoList;
+export default TodoList ;

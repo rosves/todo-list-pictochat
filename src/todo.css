@@ -29,9 +29,9 @@ background-color: #D2DCDE;
 }
 
 #barre input{
-    width: 98%;
+    width: 75%;
     height: 28px;
-    border-radius: 8px ;
+    border-radius: 8px 0 0 8px;
     border: 1px solid #B81BD2;
     outline: none;
 }
@@ -43,17 +43,15 @@ background-color: #D2DCDE;
 
 /* bouton 'ajouter'*/
 #barre button{
-    width: 7.1%;
+    width: 23%;
     height: 31px;
     background-color: hwb(291 11% 18% / 0.21);
     border: 1px #B81BD2 solid;
     border-radius: 0 8px 8px 8px;
-    position:absolute;
-    z-index: 99;
-    left: 774px;
     cursor: pointer;
     font-family:'NDS12';
     font-size: 12px;
+    top: 20px;
 }
 
 #window{
@@ -141,5 +139,190 @@ padding-top: -15px;
 /* choices */
 
 #choice{
-    border: 2px red solid;
+    /* border: 2px red solid; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    width: 15%;
+    margin-top: 2%;
 }
+
+#choice div{
+border: 1px  rgba(0, 0, 0, 0.17) solid;
+border-radius:50%;
+height:30px;
+width: 30px;
+cursor: pointer;
+}
+
+#choice button{
+    background-color: transparent;
+    border: none;
+}
+.yellow{
+    background-color: rgba(184, 27, 210, 0.21);
+}
+
+.green{
+    background-color: rgba(22, 127, 64, 0.21);
+}
+
+.rose{
+    background-color: rgba(255, 229, 0, 0.21);
+}
+
+@media screen and (max-width: 1390px){
+
+    #barre{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between ;
+    }
+    /* bouton 'ajouter'*/
+    #barre button{
+        width: 25%;
+    }
+
+}
+
+@media screen and (max-width: 1200px){
+    /* titre */
+#window h1{
+    width: 28%; 
+    padding-left: 15px;
+}
+
+#window{
+    width: 30%;
+}
+
+#barre{
+    border: 2.4px rgba(131, 143, 161, 0.5) solid;
+    width: 30%;
+}
+
+ul{
+    width: 25%;
+}
+
+}
+
+@media screen and (max-width: 1000px){
+
+    /* titre */
+#window h1{
+    background-color: hwb(291 11% 18% / 0.21);
+    border:#B81BD2 solid 1px;
+    width: 25%;
+   
+}
+#window{
+    width: 35%;
+}
+
+#barre{
+    border: 2.4px rgba(131, 143, 161, 0.5) solid;
+    width: 35%;
+}
+
+ul{
+    width: 29%;
+}
+
+}
+
+@media screen and (max-width: 900px){
+
+    /* titre */
+#window h1{
+    width: 28%;
+    font-size: 12.5px;
+    padding-left: 25px;
+}
+
+#window{
+    width: 40%;
+}
+
+#barre{
+    width: 41%;
+}
+
+ul{
+    width: 33%;
+}
+
+}
+
+@media screen and (max-width: 700px){
+
+    /* titre */
+#window h1{
+    width: 28%;
+    font-size: 12.5px;
+    padding-left: 25px;
+}
+
+#window{
+    width: 48%;
+}
+
+#barre{
+    width: 49%;
+}
+
+ul{
+    width: 38%;
+}
+
+}
+
+@media screen and (max-width: 500px){
+
+    /* titre */
+#window h1{
+    width: 30%;
+    font-size: 12.5px;
+    padding-left: 22px;
+}
+
+#window{
+    width: 58%;
+}
+
+#barre{
+    width: 59%;
+}
+
+ul{
+    width: 45%;
+}
+
+
+}
+
+@media screen and (max-width: 400px){
+
+    /* titre */
+#window h1{
+    width: 35%;
+    font-size: 12.5px;
+    padding-left: 22px;
+}
+
+#window{
+    width: 62%;
+}
+
+#barre{
+    width: 63%;
+}
+
+ul{
+    width: 45%;
+}
+
+
+}
+/* faire les plus petits telephone */
